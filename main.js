@@ -1,4 +1,4 @@
-/*시작: 연산자를 입력한다 => 숫자를 입력한다=> 숫자를 입력한다 =>
+/*시작: 숫자를 입력한다=>  연산자를 입력한다 =>숫자를 입력한다 =>
      =을 입력한다 => 계산한다=> 결과를 입력한다*/
 let inputResult = document.querySelector('#inputResult')
 operator = ''
@@ -52,18 +52,22 @@ function handlerOp(op) {
 //calculate눌렀을 때 , 즉 = 눌렀을 때 실행 함수
 const calculateFun = () => {
     let result = 0
+    num1 = parseInt(number1)
+    num2 = parseInt(number2)
+    console.log(num1)
+    console.log(number1)
     switch (operator) {
         case '+':
-            result = number1 + number2
+            result = num1 + num2
             break
         case '-':
-            result = number1 - number2
+            result = num1 - num2
             break
         case '/':
-                result = number1 / number2
+                result = num1 / num2
             break
         case '*':
-            result = number1 * number2
+            result = num1 * num2
             break
     }
     inputResult.textContent = result

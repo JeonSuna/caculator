@@ -54,8 +54,7 @@ const calculateFun = () => {
     let result = 0
     num1 = parseInt(number1)
     num2 = parseInt(number2)
-    console.log(num1)
-    console.log(number1)
+ 
     switch (operator) {
         case '+':
             result = num1 + num2
@@ -70,6 +69,7 @@ const calculateFun = () => {
             result = num1 * num2
             break
     }
+    result = Math.round(result * 10) / 10  //소수점 둘째자리에서 반올림함 
     inputResult.textContent = result
 }
 document.querySelector('#calculate').addEventListener('click', calculateFun)
@@ -81,3 +81,4 @@ document.querySelector('#divide').addEventListener('click', () => handlerOp('/')
 document.querySelector('#multiply').addEventListener('click', () => handlerOp('*'))
 document.querySelector('#minus').addEventListener('click', () => handlerOp('-'))
 
+///연속 숫자 나오게 하기 
